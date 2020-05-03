@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SpeedTypingGame</title>
+        <style>
+body{
+    background-color: #ffffff;
+    color: rgb(19, 0, 0);
+}
+header{
+    text-align: center;
+    padding: 3px;
+    margin-bottom: 5;
+    background-color: hsl(289, 52%, 55%);
+    border-radius: 30px;
+}
+.container{text-align: center;}
+.row{margin: auto;}
+.text-success{color: rgb(229, 17, 201);}
+.display{margin-bottom: 5;}
+.form-control{border-radius: 20px;
+                padding: 10px;
+                padding-left: 80px;}
+.btn{border-radius: 20px;
+        padding: 10px;
+        background-color: #e03bca;
+        cursor: pointer;}
+#time, #score, #highscore{color: #e03bca;}
+.card{background-color: rgb(207, 83, 176);
+        color: black;
+        border-radius: 10px;
+        margin-left: 20%;
+        margin-right: 20%;
+        }
+        </style>
+    </head>
+
+
+
+
+<body class="body">
+<header class="header">
+    <h1>WordEater</h1>
+
+</header>
+<div class="container">
+
+    <div class="row">
+    <div class="col">
+<p class="lead">Type The Given Word Within <span class="text-success" id="seconds"> 5 </span> Seconds: </p>
+<h2>High Score:</h2><h2 style="display: inline-block;" id="highscore">0</h2>
+<h2 class="display" id="current-word">hello</h2>
+<input type="text" class="form-control" placeholder="Start typing..." id="wordinput" autofocuss>
+<p><button id="startgame" onclick="startGame(this)" class="btn">Start Game</button>
+<button onclick="removeScore(this)" class="btn">Remove Score</button></p>
+
+<h4 class="message" id="message"></h4>
+
+<!--Time and Score-->
+<div class="row">
+    <div class="col">
+        <h3>Time Left: <span id="time">0</span></h3>
+    </div>
+    <div class="col">
+        <h3>Score: <span id="score">0</span></h3>
+    </div>
+</div>
+
+<!--Instructions-->
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <h5>Instructions</h5>
+            <p>Type each word within the given amount of seconds to score. Play again and your high score will be reset.</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+<script src="script.js"></script>
+
+</html>
